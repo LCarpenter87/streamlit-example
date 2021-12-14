@@ -12,7 +12,7 @@ example = st.slider('Input Example' , min_value=0, max_value=1000, value=500, st
 
 options = ['Every Time', 'Most of the Time', 'Rarely', 'Never']
 
-kindwords = st.selectbox('How often did you say Please and Thank you?', options, index=0, format_func=special_internal_function, key=None, help=None, on_change=None, args=None, kwargs=None)
+kindwords = st.selectbox('How often did you say Please and Thank you?', options, index=0)
 
 
 if st.button("Let's go", key=None, help=None, on_click=None, args=None, kwargs=None):
