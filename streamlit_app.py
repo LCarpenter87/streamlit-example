@@ -11,3 +11,10 @@ with st.echo():
 
 with st.echo():
     sentence2 = st.text_input('Input your second sentence here:') 
+
+df = pd.DataFrame({
+  'first column': [1, 2, 3, 4],
+  'second column': [10, 20, 30, 40]
+})
+
+df
