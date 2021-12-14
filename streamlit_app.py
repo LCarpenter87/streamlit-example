@@ -13,6 +13,6 @@ example = st.slider('Input Example' , min_value=0, max_value=1000, value=500, st
 
 
 if st.button("Let's go", key=None, help=None, on_click=None, args=None, kwargs=None):
-  st.text(f'{sentence1} and {setence2} and {example}')
+  st.text(f'{sentence1} and {sentence2} and {example}')
   
 
