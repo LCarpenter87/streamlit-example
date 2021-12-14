@@ -5,9 +5,27 @@ import numpy as np
 
 st.title('Testing')
 
+
+car_input = {'make': 'xyz',
+             'model':'xyz',
+             'year':'xyz',
+             'writeoff':'xyz',
+             'mileage':'xyz',
+             'BHP':'xyz',
+             'transmission':'xyz',
+             'fuel':'xyz',
+             'owners':'xyz',
+             'body':'xyz',
+             'ULEZ':'xyz',
+             'Engine':'xyz',
+             'Condition':'xyz',
+            }
+
+car_makes = ['VW', 'Audi']
+
 sentence1 = st.text_input('Input your sentence here:') 
 sentence2 = st.text_input('Input your second sentence here:') 
-carmodel = st.text_input('Please give the car model:') 
+car_input['make'] = st.radio('Please select the car make:', car_makes) 
 
 example = st.slider('Input Example' , min_value=0, max_value=1000, value=500, step=10)
 
