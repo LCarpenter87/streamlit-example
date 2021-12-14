@@ -7,5 +7,5 @@ import streamlit as st
 
 
 with st.echo():
-    sentence = st.text_input('Input your sentence here:') 
-
+    sentence1 = st.text_input('Input your sentence here:') 
+    sentence2 = st.text_input('Input your sentence here:') 
