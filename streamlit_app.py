@@ -10,4 +10,4 @@ with st.echo():
     sentence1 = st.text_input('Input your sentence here:') 
 
 with st.echo():
-    sentence2 = st.text_input('Input your sentence here:') 
+    sentence2 = st.text_input('Input your second sentence here:') 
