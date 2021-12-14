@@ -1,9 +1,6 @@
-from collections import namedtuple
-import altair as alt
-import math
 import pandas as pd
 import streamlit as st
-
+import numpy as np
 
 
 with st.echo():
@@ -12,9 +9,7 @@ with st.echo():
 with st.echo():
     sentence2 = st.text_input('Input your second sentence here:') 
 
-df = pd.DataFrame({
-  'first column': [1, 2, 3, 4],
-  'second column': [10, 20, 30, 40]
-})
 
-df
+
+dataframe = np.random.randn(10, 20)
+st.dataframe(dataframe)
