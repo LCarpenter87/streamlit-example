@@ -8,4 +8,6 @@ import streamlit as st
 
 with st.echo():
     sentence1 = st.text_input('Input your sentence here:') 
+
+with st.echo():
     sentence2 = st.text_input('Input your sentence here:') 
