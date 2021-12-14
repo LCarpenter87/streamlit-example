@@ -8,9 +8,9 @@ st.title('Testing')
 sentence1 = st.text_input('Input your sentence here:') 
 sentence2 = st.text_input('Input your second sentence here:') 
 
+example = st.slider('Input Example' , min_value=0, max_value=1000, value=500, step=10)
 
 
-dataframe = np.random.randn(10, 20)
-st.dataframe(dataframe)
 
-print(f'{sentence1} & {sentence2}')
+
+
