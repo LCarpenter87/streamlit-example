@@ -73,7 +73,7 @@ if st.button("Word me up baby", key=None, help=None, on_click=None, args=None, k
   st.text(f'The Regex used was: {reg}')
   create_possible()
   answers = find_poss(possible, reg)
-  answers = random.shuffle(answers)
+  random.shuffle(answers)
   st.text(f'Found {len(answers)} words')
   for word in answers:
     st.text(word)
