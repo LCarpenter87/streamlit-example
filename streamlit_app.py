@@ -38,7 +38,7 @@ st.header("Let's Wordle!")
 
 st.header("Green Letters")
 letters = {}
-l1, l2, l3, l4, l5 = st.columns([1,1,1,1,1])
+l1, l2, l3, l4, l5, space = st.columns([1,1,1,1,1, 5])
 letters[1] = l1.text_input('1st letter', value="", max_chars=1)
 letters[2] = l2.text_input('2nd letter', value="", max_chars=1)
 letters[3] = l3.text_input('3rd letter', value="", max_chars=1)
