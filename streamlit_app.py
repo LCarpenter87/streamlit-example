@@ -30,8 +30,8 @@ def generate_reg(letters, orange, include, exclude):
         reg += "."  
   return reg
 
-st.header("Let's Wordle!")
-st.title("Green Letters")
+st.title("Let's Wordle!")
+st.header("Green Letters")
 st.caption("Put in your green known letters, in the correct position")
 letters = {}
 l1, l2, l3, l4, l5, space = st.columns([1,1,1,1,1, 5])
@@ -42,7 +42,7 @@ letters[4] = l4.text_input('4th letter', value="", max_chars=1)
 letters[5] = l5.text_input('5th letter', value="", max_chars=1)
 
 
-st.title("Gray Letters")
+st.header("Gray Letters")
 st.caption("Put in your gray letters, in any order (no spaces)")
 exclude = st.text_input('Gray Letters', value="")
 orange = {}
