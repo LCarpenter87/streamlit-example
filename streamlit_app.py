@@ -17,27 +17,20 @@ def find_poss(possible, reg):
 
 def generate_reg(letters, orange, include, exclude):
   reg = '^'
-
   for letter in include:
     reg += f'(?=[a-z]*{letter})'
-
   for letter in exclude:
     reg += f'(?![a-z]*[{letter}])'
-
   for k,v in letters.items():
     if v != '':
       reg += v
     elif orange[k] != '':
       reg += f'[^{orange[k]}]'
     else:
-        reg += "."
-  
+        reg += "."  
   return reg
 
-
 st.header("Let's Wordle!")
-
-
 st.title("Green Letters")
 st.caption("Put in your green known letters, in the correct position")
 letters = {}
@@ -69,13 +62,13 @@ for v in orange.values():
   include += v
 
 
-#if st.button("Word me up baby", key=None, help=None, on_click=None, args=None, kwargs=None):
+
 reg = generate_reg(letters, orange, include, exclude)
-st.text(f'The Regex used was: {reg}')
+st.caption(f'The Regex used was: {reg}')
 create_possible()
 answers = find_poss(possible, reg)
 random.shuffle(answers)
-st.text(f'Found {len(answers)} words')
+st.caption(f'Found {len(answers)} words')
 for word in answers:
   st.text(word)
 
