@@ -38,7 +38,7 @@ st.header("Let's Wordle!")
 
 st.header("Green Letters")
 letters = {}
-letters[1] = st.text_input('1st letter', value="", height=1, max_chars=1, key=None, help=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
+letters[1] = st.text_input('1st letter', value="", max_chars=1)
 letters[2] = st.text_area('2nd letter', value="", height=2, max_chars=1, key=None, help=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
 letters[3] = st.text_area('3rd letter', value="", height=3, max_chars=1, key=None, help=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
 letters[4] = st.text_area('4th letter', value="", height=4, max_chars=1, key=None, help=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
