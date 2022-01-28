@@ -53,6 +53,7 @@ exclude = st.text_input('Gray Letters', value="")
 orange = {}
 st.header("Orange Letters")
 st.caption("Put in your orange letters, in the position you tried them in")
+st.caption("You can put multiple orange letters in each position (no spaces)")
 
 o1, o2, o3, o4, o5 = st.columns([1,1,1,1,1])
 orange[1] = o1.text_input('1st letter', value="", max_chars=5)
