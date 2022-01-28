@@ -39,23 +39,23 @@ st.header("Let's Wordle!")
 st.header("Green Letters")
 letters = {}
 letters[1] = st.text_input('1st letter', value="", max_chars=1)
-letters[2] = st.text_area('2nd letter', value="", height=2, max_chars=1, key=None, help=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
-letters[3] = st.text_area('3rd letter', value="", height=3, max_chars=1, key=None, help=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
-letters[4] = st.text_area('4th letter', value="", height=4, max_chars=1, key=None, help=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
-letters[5] = st.text_area('5th letter', value="", height=5, max_chars=1, key=None, help=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
+letters[2] = st.text_input('2nd letter', value="", max_chars=1)
+letters[3] = st.text_input('3rd letter', value="", max_chars=1)
+letters[4] = st.text_input('4th letter', value="", max_chars=1)
+letters[5] = st.text_input('5th letter', value="", max_chars=1)
 
 
 st.header("Gray Letters")
-exclude = st.text_area('Gray Letters', value="", height=None, max_chars=None, key=None, help=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
+exclude = st.text_input('Gray Letters', value="")
 
 
 orange = {}
 st.header("Orange Letters")
-orange[1] = st.text_area('1st letter', value="", height=10, max_chars=5, key=None, help=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
-orange[2] = st.text_area('2nd letter', value="", height=20, max_chars=5, key=None, help=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
-orange[3] = st.text_area('3rd letter', value="", height=None, max_chars=5, key=None, help=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
-orange[4] = st.text_area('4th letter', value="", height=None, max_chars=5, key=None, help=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
-orange[5] = st.text_area('5th letter', value="", height=None, max_chars=5, key=None, help=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
+orange[1] = st.text_input('1st letter', value="", max_chars=5)
+orange[2] = st.text_input('2nd letter', value="", max_chars=5)
+orange[3] = st.text_input('3rd letter', value="", max_chars=5)
+orange[4] = st.text_input('4th letter', value="", max_chars=5)
+orange[5] = st.text_input('5th letter', value="", max_chars=5)
 
 include = ''
 for v in orange.values():
