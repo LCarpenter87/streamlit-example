@@ -33,6 +33,17 @@ def generate_reg(letters, orange, include, exclude):
   
   return reg
 
+
+st.header("Let's go!")
+
+letters = {}
+letters[1] = st.text_area('1st letter', value="", height=None, max_chars=1, key=None, help=None, on_change=None, args=None, kwargs=None, *, placeholder=None, disabled=False)
+letters[2] = st.text_area('2nd letter', value="", height=None, max_chars=1, key=None, help=None, on_change=None, args=None, kwargs=None, *, placeholder=None, disabled=False)
+letters[3] = st.text_area('3rd letter', value="", height=None, max_chars=1, key=None, help=None, on_change=None, args=None, kwargs=None, *, placeholder=None, disabled=False)
+letters[4] = st.text_area('4th letter', value="", height=None, max_chars=1, key=None, help=None, on_change=None, args=None, kwargs=None, *, placeholder=None, disabled=False)
+letters[5] = st.text_area('5th letter', value="", height=None, max_chars=1, key=None, help=None, on_change=None, args=None, kwargs=None, *, placeholder=None, disabled=False)
+
+
 question = st.selectbox("What question do you want?", ["How tall is this?", "how wide is this?"], index=0)
 answer = st.text_area("What's the answer" , value="")
 
