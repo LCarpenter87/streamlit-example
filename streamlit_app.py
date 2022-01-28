@@ -58,6 +58,7 @@ orange[3] = st.text_area('3rd letter', value="", height=None, max_chars=5, key=N
 orange[4] = st.text_area('4th letter', value="", height=None, max_chars=5, key=None, help=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
 orange[5] = st.text_area('5th letter', value="", height=None, max_chars=5, key=None, help=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
 
+include = ''
 for v in orange.values():
   include += v
 
