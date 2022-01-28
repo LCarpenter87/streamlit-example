@@ -38,11 +38,14 @@ st.header("Let's Wordle!")
 
 st.header("Green Letters")
 letters = {}
-letters[1] = st.text_input('1st letter', value="", max_chars=1)
-letters[2] = st.text_input('2nd letter', value="", max_chars=1)
-letters[3] = st.text_input('3rd letter', value="", max_chars=1)
-letters[4] = st.text_input('4th letter', value="", max_chars=1)
-letters[5] = st.text_input('5th letter', value="", max_chars=1)
+
+l1, l2, l3, l4, l5 = st.beta_columns([1,1,1,1,1])
+
+letters[1] = l1.text_input('1st letter', value="", max_chars=1)
+letters[2] = l2.text_input('2nd letter', value="", max_chars=1)
+letters[3] = l3.text_input('3rd letter', value="", max_chars=1)
+letters[4] = l4.text_input('4th letter', value="", max_chars=1)
+letters[5] = l5.text_input('5th letter', value="", max_chars=1)
 
 
 st.header("Gray Letters")
