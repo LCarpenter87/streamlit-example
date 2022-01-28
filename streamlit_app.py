@@ -38,9 +38,7 @@ st.header("Let's Wordle!")
 
 st.header("Green Letters")
 letters = {}
-
 l1, l2, l3, l4, l5 = st.columns([1,1,1,1,1])
-
 letters[1] = l1.text_input('1st letter', value="", max_chars=1)
 letters[2] = l2.text_input('2nd letter', value="", max_chars=1)
 letters[3] = l3.text_input('3rd letter', value="", max_chars=1)
@@ -50,15 +48,15 @@ letters[5] = l5.text_input('5th letter', value="", max_chars=1)
 
 st.header("Gray Letters")
 exclude = st.text_input('Gray Letters', value="")
-
-
 orange = {}
 st.header("Orange Letters")
-orange[1] = st.text_input('1st letter', value="", max_chars=5)
-orange[2] = st.text_input('2nd letter', value="", max_chars=5)
-orange[3] = st.text_input('3rd letter', value="", max_chars=5)
-orange[4] = st.text_input('4th letter', value="", max_chars=5)
-orange[5] = st.text_input('5th letter', value="", max_chars=5)
+
+o1, o2, o3, o4, o5 = st.columns([1,1,1,1,1])
+orange[1] = o1.text_input('1st letter', value="", max_chars=5)
+orange[2] = o2.text_input('2nd letter', value="", max_chars=5)
+orange[3] = o3.text_input('3rd letter', value="", max_chars=5)
+orange[4] = o4.text_input('4th letter', value="", max_chars=5)
+orange[5] = o5.text_input('5th letter', value="", max_chars=5)
 
 include = ''
 for v in orange.values():
