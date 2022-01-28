@@ -3,11 +3,12 @@ import re
 import csv
 import random
 
+## Generate List of possible words
 def create_possible():
   global possible
   with open('wordlelist.csv', newline='') as f:
       reader = csv.reader(f)
-      possible = [x[0] for x in reader]
+      possible = set(x[0] for x in reader)
       f.close()
 
 def find_poss(possible, reg):
