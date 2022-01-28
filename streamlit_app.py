@@ -2,7 +2,6 @@ import streamlit as st
 import re
 import csv
 
-@st.cache
 def create_possible():
   global possible
   with open('wordlelist.csv', newline='') as f:
