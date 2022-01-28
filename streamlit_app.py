@@ -69,13 +69,13 @@ for v in orange.values():
   include += v
 
 
-if st.button("Word me up baby", key=None, help=None, on_click=None, args=None, kwargs=None):
-  reg = generate_reg(letters, orange, include, exclude)
-  st.text(f'The Regex used was: {reg}')
-  create_possible()
-  answers = find_poss(possible, reg)
-  random.shuffle(answers)
-  st.text(f'Found {len(answers)} words')
-  for word in answers:
-    st.text(word)
+#if st.button("Word me up baby", key=None, help=None, on_click=None, args=None, kwargs=None):
+reg = generate_reg(letters, orange, include, exclude)
+st.text(f'The Regex used was: {reg}')
+create_possible()
+answers = find_poss(possible, reg)
+random.shuffle(answers)
+st.text(f'Found {len(answers)} words')
+for word in answers:
+  st.text(word)
 
