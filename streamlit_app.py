@@ -34,20 +34,39 @@ def generate_reg(letters, orange, include, exclude):
   return reg
 
 
-st.header("Let's go!")
+st.header("Let's Wordle!")
 
+
+st.header("Green Letters")
 letters = {}
-letters[1] = st.text_area('1st letter', value="", height=None, max_chars=1, key=None, help=None, on_change=None, args=None, kwargs=None, *, placeholder=None, disabled=False)
-letters[2] = st.text_area('2nd letter', value="", height=None, max_chars=1, key=None, help=None, on_change=None, args=None, kwargs=None, *, placeholder=None, disabled=False)
-letters[3] = st.text_area('3rd letter', value="", height=None, max_chars=1, key=None, help=None, on_change=None, args=None, kwargs=None, *, placeholder=None, disabled=False)
-letters[4] = st.text_area('4th letter', value="", height=None, max_chars=1, key=None, help=None, on_change=None, args=None, kwargs=None, *, placeholder=None, disabled=False)
-letters[5] = st.text_area('5th letter', value="", height=None, max_chars=1, key=None, help=None, on_change=None, args=None, kwargs=None, *, placeholder=None, disabled=False)
+letters[1] = st.text_area('1st letter', value="", height=None, max_chars=1, key=None, help=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
+letters[2] = st.text_area('2nd letter', value="", height=None, max_chars=1, key=None, help=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
+letters[3] = st.text_area('3rd letter', value="", height=None, max_chars=1, key=None, help=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
+letters[4] = st.text_area('4th letter', value="", height=None, max_chars=1, key=None, help=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
+letters[5] = st.text_area('5th letter', value="", height=None, max_chars=1, key=None, help=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
 
 
-question = st.selectbox("What question do you want?", ["How tall is this?", "how wide is this?"], index=0)
-answer = st.text_area("What's the answer" , value="")
+st.header("Gray Letters")
+exclude = st.text_area('Gray Letters', value="", height=None, max_chars=None, key=None, help=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
 
-if st.button("Let's go", key=None, help=None, on_click=None, args=None, kwargs=None):
-  st.text(f'Your question was {question}, your answer was {answer}')
-  
+
+orange = {}
+st.header("Orange Letters")
+orange[1] = st.text_area('1st letter', value="", height=None, max_chars=5, key=None, help=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
+orange[2] = st.text_area('2nd letter', value="", height=None, max_chars=5, key=None, help=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
+orange[3] = st.text_area('3rd letter', value="", height=None, max_chars=5, key=None, help=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
+orange[4] = st.text_area('4th letter', value="", height=None, max_chars=5, key=None, help=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
+orange[5] = st.text_area('5th letter', value="", height=None, max_chars=5, key=None, help=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
+
+for v in orange.values():
+  include += v
+
+
+if st.button("Word me up baby", key=None, help=None, on_click=None, args=None, kwargs=None):
+  reg = generate_reg(letters, orange, include, exclude)
+  st.text(reg)
+  create_possible()
+  answers = find_poss(possible, reg)
+  st.text(f'Found {len(answers)} words')
+  st.text(answers)
 
