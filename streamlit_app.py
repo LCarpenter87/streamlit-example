@@ -6,4 +6,4 @@ st.header("DS4 > DS3 == True")
 number1 = st.text_input("First number?")
 number2 = st.text_input("Second number")
 
-st.text(int(number1) + int(number2)) 
+st.title(int(number1) + int(number2)) 
